@@ -1,0 +1,76 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/auth/login/login",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/datarecord/datarecord",
+    "pages/sugarRecord/sugarRecord",
+    "pages/zixun/zixun",
+    "pages/my/my",
+    "pages/shouye/shouye",
+    "pages/recordHand/xuetang/xuetang",
+    "pages/recordHand/xueya/xueya",
+    "pages/recordMachine/xuetang/xuetang",
+    "pages/recordMachine/xueya/xueya",
+    "pages/recordVoice/xuetang/xuetang",
+    "pages/recordVoice/xueya/xueya",
+    "pages/diet/diet"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1d7223",
+    "navigationBarTitleText": "健康宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#007aff",
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/shouye/shouye",
+        "iconPath": "images/icon/shouye_1s.png",
+        "selectedIconPath": "images/icon/shouye_1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/datarecord/datarecord",
+        "iconPath": "images/icon/shujus.png",
+        "selectedIconPath": "images/icon/shuju.png",
+        "text": "数据记录"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/quanzis.png",
+        "selectedIconPath": "images/icon/quanzi.png",
+        "text": "圈子"
+      },
+      {
+        "pagePath": "pages/zixun/zixun",
+        "iconPath": "images/icon/dialogs.png",
+        "selectedIconPath": "images/icon/dialog.png",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon/wodes.png",
+        "selectedIconPath": "images/icon/wode.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
