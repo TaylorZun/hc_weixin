@@ -1,0 +1,33 @@
+<!-- zixun.wxml 数据记录大页面 -->
+<view class="container">
+  <view>
+    <text>记录点滴健康</text>
+  </view>
+  <view class="cells">
+    <view class="item" wx:for="{{memberList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+      <view bindtap='isOpen' class="cdn" data-index="{{item.id}}">
+        <view>
+          <image class="img" src="{{item.images}}" mode="aspectFill"></image>
+          <text class="content">{{item.cont}}</text>
+        </view>
+        <view>
+          <image class="icon_img" src="{{item.img_icon}}" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view hidden="{{item.hiddens}}" class="hidden">
+        <block wx:for="{{item.invalidActivity}}" wx:for-index="index" wx:for-item="items" wx:key="index">
+          <view class="choose">
+            <view>
+              <navigator url="{{items.url}}">
+                <image class="v_image" src="{{items.images}}" mode='aspectFill'></image>
+              </navigator>
+            </view>
+            <view>
+              <text class="shuoming">{{items.content}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

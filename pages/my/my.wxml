@@ -1,0 +1,78 @@
+<!-- 我的界面 -->
+<view class="content">
+    <view class="hr"></view>
+    <view class="bg">
+        <view class="head">
+            <view class="headIcon">
+                <image src="/images/my/head.jpg" style="width:90rpx;height:90rpx;"></image>
+            </view>
+            <view class="name" bindtap="login">立即登录</view>
+            <view class="detail">
+                <text>></text>
+            </view>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="nav">
+        <view class="nav-item">
+            <view>
+                <navigator>
+                    <image src="/images/my/head.jpg"></image>
+                </navigator>
+            </view>
+            <view>我的咨询</view>
+        </view>
+        <view class="nav-item">
+            <view>
+                <navigator>
+                    <image src="/images/my/head.jpg"></image>
+                </navigator>
+            </view>
+            <view>健康档案</view>
+        </view>
+        <view class="nav-item">
+            <view>
+                <navigator url="../diet/diet">
+                    <image src="/images/my/head.jpg" />
+                </navigator>
+            </view>
+            <view>饮食方案</view>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item">
+        <view class="order">我的报告</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="xian"></view>
+    <view class="item">
+        <view class="order">我的收藏</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item">
+        <view class="order">风险评估结果</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="xian"></view>
+    <view class="item">
+        <view class="order">体质辨识</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item">
+        <view class="order">设置</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="hr"></view>
+</view>

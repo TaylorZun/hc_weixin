@@ -1,0 +1,28 @@
+<!-- p蓝牙连接l -->
+<view class="container">
+    <view class="section">
+        <view class="content">
+            <text>蓝牙初始化:</text>
+            <text>{{isbluetoothready?"ok":"尚未初始化"}}</text>
+        </view>
+        <view class="switch">
+            <switch checked="{{isbluetoothready}}" bindchange="switchBlueTooth" />
+        </view>
+    </view>
+    <view class="section" hidden="{{!isbluetoothready}}">
+        <button type="default" size="{{primarySize}}" loading="{{searchingstatus}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="searchbluetooth">
+            {{searchingstatus?"搜索中":"搜索蓝牙"}}
+        </button>
+    </view>
+    <block>
+        <view hidden="{{!isbluetoothready}}" class="section">
+            <view class="list-item {{deviceconnected?'deviceconnected':''}}">
+                <text>设备名称：{{item.deviceid}}</text>
+                <text>设备名称：{{item.deviceid}}</text>
+                <button id="{{item.deviceid}}" type="default" size="mini" bindtap="connectTo">
+                    {{deviceconnected?"已连接":"连接失败"}}
+                </button>
+            </view>
+        </view>
+    </block>
+</view>

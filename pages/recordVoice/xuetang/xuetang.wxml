@@ -1,0 +1,17 @@
+<!-- 血糖语音识别 -->
+<view class="container">
+    <view class="shuoming">
+        <view class="s1">你可以这样说</view>
+        <text class="s2">今天</text>
+        <text class="s3">10点30分</text>
+        <text class="s2">测的血糖是</text>
+        <text class="s3">7.6</text>
+    </view>
+    <view class="img1" bindtap="startRecord" wx:if="{{!recording}}">
+        <image class="img" mode="aspectFill" src="/images/datarecordicon/yuyin.png" />
+    </view>
+    <view class="img1" bindtap="stopRecord" wx:if="{{recording}}">
+        <image class="img" mode="aspectFill" src="/images/datarecordicon/yuyin.gif" />
+    </view>
+    <view class="footer">点击按钮，说出你今天的血糖状况</view>
+</view>

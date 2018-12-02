@@ -1,0 +1,104 @@
+page{
+  background: #fff;
+}
+.cells .item .cdn{
+  position: relative;
+  box-sizing:border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 20rpx 20rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+.cells .item .cdn::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:200%;
+    height:200%;
+    -webkit-transform:scale(.5);
+    transform:scale(.5);
+    -webkit-transform-origin:0 0;
+    transform-origin:0 0;
+    pointer-events:none;
+    box-sizing:border-box;
+    border-bottom:0 solid #f0f0f0;
+    border-width:1px;
+}
+ /* @左侧图标 */
+.img{
+    height: 60rpx;
+    width: 60rpx;
+    vertical-align: middle;
+    /*display: inline-block;*/
+    line-height: 110rpx;
+ 
+}
+
+/* @右侧加减号 */
+.icon_img {
+  height: 50rpx;
+  width: 50rpx;
+  margin-left: 230rpx;
+  margin-top: 15rpx;
+  vertical-align: middle;
+}
+
+ 
+.content{
+    margin-left: 20rpx;
+    line-height: 82rpx;
+    vertical-align: middle;
+}
+
+/* @整体隐藏区域，包括三个子部分 */
+.hidden{
+    display: flex;
+    flex-direction: row;
+    height: 170rpx;
+    margin-top: 10rpx;
+    border-radius: 5rpx;
+}
+ 
+/* @每一个区块，设备、语音 */
+.choose{
+   
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* .choose::after {
+    content:'';
+    position:absolute;
+    top:0;left:0;
+    width:200%;
+    height:200%;
+    -webkit-transform:scale(.5);
+    transform:scale(.5);
+    -webkit-transform-origin:0 0;
+    transform-origin:0 0;
+    pointer-events:none;
+   
+} */
+
+
+
+ 
+.v_image{
+    padding-left: 5rpx;
+    color: #3B3B3B;
+    height:70rpx;
+    width: 70rpx; 
+}
+
+.shuoming{
+    padding-left: 5rpx;
+    font-size: 25rpx;
+    color: rgb(20, 13, 13);
+    margin: 0 auto;
+}
+

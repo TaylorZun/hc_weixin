@@ -1,0 +1,40 @@
+/* pages/recordVoice/xuetang/xuetang.wxss */
+.container {
+    width: 100%;
+}
+.shuoming {
+    margin: 0 auto;
+    margin-bottom: 40rpx;
+   
+}
+.s1 {
+    margin: 0 auto;
+    font-size: 32rpx;
+    color: darkgrey;
+    margin-top: 80rpx;
+    margin-bottom: 30rpx;
+}
+
+.s2 {
+    margin: 0 auto;
+    font-size: 34rpx;
+
+}
+
+.s3 {
+    font-size: 38rpx;
+    color: blue;
+}
+
+.img1{
+    margin-top: 400rpx;
+}
+.img {
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.footer {
+    margin-top: 200rpx;
+    color: darkgray;
+}
