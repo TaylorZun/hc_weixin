@@ -1,2 +1,30 @@
-<!--血糖手动记录界面-->
-<text>pages/recordHand/xuetang/xuetang.wxml</text>
+<!-- 血糖手动记录界面 -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+        <picker mode="date" value="{{date}}" start="2018-01-01" end="2019-12-31" bindchange="bindDateChange">
+            <view class="picker">
+                测量时间
+                <view class="datetime">{{date}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class="section1">
+        <view class="wenzi">血糖</view>
+    </view>
+    <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">时间点</view>
+            <view class="time">{{array[index]}}</view>
+        </picker>
+    </view>
+    <view class="section">
+        <view class="section_title">备注</view>
+        <view class="input">
+            <input name="input" placeholder="请添加备注信息" />
+        </view>
+    </view>
+    <view class="shuoming">早中晚餐后血糖建议用餐后两小时测量</view>
+    <view class="btn">
+        <button form-type="submit" type="primary">保存数据</button>
+    </view>
+</form>
