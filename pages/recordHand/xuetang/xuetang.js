@@ -1,13 +1,20 @@
 // pages/recordHand/xuetang/xuetang.js
+var dateTimePicker = require('../../../utils/utils.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    date: '2018-10-18',
+    time: '12:00',
+    dateTimeArray1: null,
+    dateTime1: null,
+    startYear: 2000,
+    endYear: 2050,
     array: ['空腹', '早餐后', '午餐前', '午餐后', '晚餐前', '晚餐后', '睡前', '凌晨'],
-    objectArray: [
-      {
+    objectArray: [{
         id: 0,
         name: '空腹'
       },
@@ -44,79 +51,101 @@ Page({
 
   },
   /**
-   * 日期控件
+   * 日期控件  
    * @param {*} e 
    */
-  bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+  changeDateTime1(e) {
     this.setData({
-      date: e.detail.value
-    })
+      dateTime1: e.detail.value
+    });
   },
+  changeDateTimeColumn1(e) {
+    var arr = this.data.dateTime1,
+      dateArr = this.data.dateTimeArray1;
 
+    arr[e.detail.column] = e.detail.value;
+    dateArr[2] = dateTimePicker.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
+
+    this.setData({
+      dateTimeArray1: dateArr,
+      dateTime1: arr
+    });
+  },
   /**
    * 多项选择控件
    * @param {*} e 
    */
-    bindPickerChange: function (e) {
-      console.log('picker发送选择改变，携带值为', e.detail.value)
-      this.setData({
-        index: e.detail.value
-      })
-    },
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 获取完整的年月日 时分秒，以及默认显示的数组
+    var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
+    // 精确到分的处理，将数组的秒去掉
+    var lastArray = obj1.dateTimeArray.pop();
+    var lastTime = obj1.dateTime.pop();
 
+    this.setData({
+
+      dateTimeArray1: obj1.dateTimeArray,
+      dateTime1: obj1.dateTime
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+/**
+ * 生命周期函数--监听页面初次渲染完成
+ */
+onReady: function () {
 
-  },
+},
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+/**
+ * 生命周期函数--监听页面显示
+ */
+onShow: function () {
 
-  },
+},
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+/**
+ * 生命周期函数--监听页面隐藏
+ */
+onHide: function () {
 
-  },
+},
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+/**
+ * 生命周期函数--监听页面卸载
+ */
+onUnload: function () {
 
-  },
+},
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+/**
+ * 页面相关事件处理函数--监听用户下拉动作
+ */
+onPullDownRefresh: function () {
 
-  },
+},
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+/**
+ * 页面上拉触底事件的处理函数
+ */
+onReachBottom: function () {
 
-  }
+},
+
+/**
+ * 用户点击右上角分享
+ */
+onShareAppMessage: function () {
+
+}
 })

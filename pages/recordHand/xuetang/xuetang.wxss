@@ -1,1 +1,25 @@
 /* pages/recordHand/xuetang/xuetang.wxss */
+.hr {
+    height: 10rpx;
+    background-color: #F5F5F5;
+}
+
+.section {
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.picker {
+    padding-top: 20rpx;
+    padding-right: 15rpx;
+    padding-left: 15rpx;
+}
+
+.picker2 {
+    padding-top: 20rpx;
+    padding-right: 15rpx;
+    padding-left: 180rpx;
+    color: darkgrey;
+}

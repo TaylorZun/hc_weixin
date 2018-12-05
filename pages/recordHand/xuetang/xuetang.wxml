@@ -1,13 +1,16 @@
 <!-- 血糖手动记录界面 -->
 <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="section">
-        <picker mode="date" value="{{date}}" start="2018-01-01" end="2019-12-31" bindchange="bindDateChange">
-            <view class="picker">
-                测量时间
-                <view class="datetime">{{date}}</view>
-            </view>
-        </picker>
+        <view class="picker">测量时间</view>
+        <view class="picker2">
+            <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+                <view class="datetime">
+                    {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+                </view>
+            </picker>
+        </view>
     </view>
+    <view class="hr"></view>
     <view class="section1">
         <view class="wenzi">血糖</view>
     </view>
