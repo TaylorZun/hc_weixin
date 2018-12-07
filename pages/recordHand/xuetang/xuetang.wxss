@@ -10,6 +10,22 @@
     flex-direction: row;
 
 }
+.section1 {
+    height: 300rpx;
+    padding-left: 15rpx;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15rpx;
+}
+
+.input {
+    margin-bottom: 30rpx;
+    height: 80rpx;
+    margin-top: 20rpx;
+}
 
 .picker {
     padding-top: 20rpx;
@@ -22,4 +38,39 @@
     padding-right: 15rpx;
     padding-left: 180rpx;
     color: darkgrey;
+}
+
+.shuoming {
+    text-align: center;
+    color: darkgray;
+    font-size: 35rpx;
+    margin-bottom: 25rpx;
+    margin-top: 300rpx;
+}
+
+.sugar {
+    display: flex;
+    flex-direction: row;
+}
+
+.del1 {
+    height: 55rpx;
+    width: 55rpx;
+    padding-left: 180rpx;
+    padding-right: 30rpx;
+
+}
+
+.data {
+    font-size: 40rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    width:220rpx;
+    background-color: mediumaquamarine;
+}
+.add1 {
+    height: 55rpx;
+    width: 55rpx;
+    padding-left: 30rpx;
+    padding-right: 110rpx;
 }

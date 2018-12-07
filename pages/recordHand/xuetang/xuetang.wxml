@@ -13,19 +13,35 @@
     <view class="hr"></view>
     <view class="section1">
         <view class="wenzi">血糖</view>
+        <view class="sugar">
+            <view class="del" bindtap="delSugar">
+                <image class="del1" src="/images/jian.png" />
+            </view>
+            <view class="data">{{sugardata}}   mmol/L</view>
+            <!-- <view class="data1"><input class="data" type="digit" value="{{sugardata}}"  /></view> -->
+            <view class="add" bindtap="addSugar">
+                <image class="add1" src="/images/jia.png" />
+            </view>
+        </view>
     </view>
+    <view class="hr"></view>
     <view class="section">
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-            <view class="picker">时间点</view>
-            <view class="time">{{array[index]}}</view>
-        </picker>
+        <view class="picker">时间点</view>
+        <view class="picker2">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="time">{{array[index]}}</view>
+            </picker>
+        </view>
     </view>
-    <view class="section">
+    <view class="hr"></view>
+    <view class="section2">
         <view class="section_title">备注</view>
         <view class="input">
             <input name="input" placeholder="请添加备注信息" />
         </view>
     </view>
+        <view class="hr"></view>
+
     <view class="shuoming">早中晚餐后血糖建议用餐后两小时测量</view>
     <view class="btn">
         <button form-type="submit" type="primary">保存数据</button>

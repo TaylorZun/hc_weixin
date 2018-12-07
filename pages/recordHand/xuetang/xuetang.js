@@ -9,6 +9,7 @@ Page({
   data: {
     date: '2018-10-18',
     time: '12:00',
+    sugardata: 5.0,
     dateTimeArray1: null,
     dateTime1: null,
     startYear: 2000,
@@ -94,9 +95,23 @@ Page({
     this.setData({
 
       dateTimeArray1: obj1.dateTimeArray,
-      dateTime1: obj1.dateTime
+      dateTime1: obj1.dateTime,
+    
     });
   },
+
+  /**
+   * 降低血糖数
+   */
+  
+  addSugar: function(sugardata){
+    var that = this
+    var sugardata1 = Number(sugardata) + 0.1
+    that.setData({
+      sugardata: sugardata1
+    })
+    },
+  
 
 
 
