@@ -9,7 +9,10 @@ Page({
   data: {
     date: '2018-10-18',
     time: '12:00',
-    sugardata: 5.0,
+    sugardata: 6.0,
+    toastHidden: true,
+    modalHidden: true,
+    notice_str: '',
     dateTimeArray1: null,
     dateTime1: null,
     startYear: 2000,
@@ -52,7 +55,7 @@ Page({
 
   },
   /**
-   * 日期控件  
+   * 日期控件   
    * @param {*} e 
    */
   changeDateTime1(e) {
@@ -72,6 +75,9 @@ Page({
       dateTime1: arr
     });
   },
+
+
+
   /**
    * 多项选择控件
    * @param {*} e 
@@ -96,71 +102,126 @@ Page({
 
       dateTimeArray1: obj1.dateTimeArray,
       dateTime1: obj1.dateTime,
-    
+
     });
   },
 
   /**
    * 降低血糖数
    */
-  
-  addSugar: function(sugardata){
-    var that = this
-    var sugardata1 = Number(sugardata) + 0.1
+
+  addSugar: function () {
+    let sugardata = dateTimePicker.add(this.data.sugardata, 0.1)
+    // console.log(sugardata)
+    let that = this
     that.setData({
-      sugardata: sugardata1
+      sugardata: sugardata
     })
-    },
-  
+  },
 
+  delSugar: function () {
+    let sugardata = dateTimePicker.decrease(this.data.sugardata, 0.1)
+    let that = this
+    that.setData({
+      sugardata: sugardata
+    })
+  },
 
+  toastChange: function (e) {
+    this.setData({
+      toastHidden: true
+    })
+  },
 
-/**
- * 生命周期函数--监听页面初次渲染完成
- */
-onReady: function () {
+  //弹出确认框
+  modalTap: function (e) {
+    this.setData({
+      modalHidden: false
+    })
+  },
 
-},
+  confirm: function (e) {
+    this.setData({
+      modalHidden: true,
+      toastHidden: false,
+      notice_str: '提交成功'
+    })
+  },
 
-/**
- * 生命周期函数--监听页面显示
- */
-onShow: function () {
+  cancel: function (e) {
+    this.setData({
+      modalHidden: true,
+      toastHidden: false,
+      notice_str: '取消成功'
 
-},
+    })
+  },
 
-/**
- * 生命周期函数--监听页面隐藏
- */
-onHide: function () {
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
 
-},
+  },
 
-/**
- * 生命周期函数--监听页面卸载
- */
-onUnload: function () {
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
 
-},
+  },
 
-/**
- * 页面相关事件处理函数--监听用户下拉动作
- */
-onPullDownRefresh: function () {
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
 
-},
+  },
 
-/**
- * 页面上拉触底事件的处理函数
- */
-onReachBottom: function () {
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
 
-},
+  },
 
-/**
- * 用户点击右上角分享
- */
-onShareAppMessage: function () {
+  /**
+   * 进行界面的提交
+   */
+  formSubmit: function (e) {
+    let that = this
+    let formData = e.detail.value
+    wx.request({
+      url: '',
+      data: formData,
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        console.log(res.data)
+        that.modalTap()
+      }
+    })
+  },
 
-}
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
 })

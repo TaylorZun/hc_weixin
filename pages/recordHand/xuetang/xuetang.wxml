@@ -17,8 +17,8 @@
             <view class="del" bindtap="delSugar">
                 <image class="del1" src="/images/jian.png" />
             </view>
-            <view class="data">{{sugardata}}   mmol/L</view>
-            <!-- <view class="data1"><input class="data" type="digit" value="{{sugardata}}"  /></view> -->
+           <!-- 这个写法也可以  <view class="data">{{sugardata}}   mmol/L</view>    -->
+             <view class="data1"><input class="data" type="digit" value="{{sugardata}}  mmol/L"  /></view> 
             <view class="add" bindtap="addSugar">
                 <image class="add1" src="/images/jia.png" />
             </view>
@@ -47,3 +47,15 @@
         <button form-type="submit" type="primary">保存数据</button>
     </view>
 </form>
+
+<!--提示框部分设置-->
+<toast hidden="{{toastHidden}}" bindchange="toastChange">
+{{notice_str}}
+</toast>
+
+<view class="page_bd">
+<modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm" bindcancel="cancel" >
+确认提交吗？
+</modal>
+
+</view>
