@@ -1,4 +1,3 @@
-
 var api = require('../config/api.js')
 
 function formatTime(date) {
@@ -23,7 +22,7 @@ function request(url, data = {}, method = "GET") {
     return new Promise(function (resolve, reject) {
         wx.request({
             url: url,
-            data:data,
+            data: data,
             method: method,
             header: {
                 'content-Type': 'application/json',
@@ -31,8 +30,8 @@ function request(url, data = {}, method = "GET") {
             },
             success: function (res) {
                 console.log("success");
-                if(res.statusCode == 200) {
-                    if(res.data.errno == 401) {
+                if (res.statusCode == 200) {
+                    if (res.data.errno == 401) {
                         //应该先登录才可以操作
                         let code = null;
                         return login().then((res) => {
@@ -40,7 +39,10 @@ function request(url, data = {}, method = "GET") {
                             return getUserInfo()
                         }).then((userInfo) => {
                             //登录远程服务器
-                            request(api.AuthLoginByWeixin, { code: code, userInfo: userInfo }, 'POST').then(res => {
+                            request(api.AuthLoginByWeixin, {
+                                code: code,
+                                userInfo: userInfo
+                            }, 'POST').then(res => {
                                 if (res.errno === 0) {
                                     //存储用户信息
                                     wx.setStorageSync('userInfo', res.data.userInfo)
@@ -52,7 +54,7 @@ function request(url, data = {}, method = "GET") {
                                 }
                             }).catch((err) => {
                                 reject(err)
-                        })
+                            })
                         }).catch((err) => {
                             reject(err)
                         })
@@ -89,18 +91,18 @@ function checkSession() {
 function login() {
     return new Promise(function (resolve, reject) {
         wx.login({
-            success: function(res) {
-                if(res.code) {
-                //登录远程服务器
-                console.log(res)
-                resolve(res)
-            } else {
-                reject(res)
+            success: function (res) {
+                if (res.code) {
+                    //登录远程服务器
+                    console.log(res)
+                    resolve(res)
+                } else {
+                    reject(res)
+                }
+            },
+            fail: function (err) {
+                reject(err);
             }
-        },
-        fail:function (err) {
-            reject(err);
-        }
         });
     })
 }
@@ -122,7 +124,7 @@ function getUserInfo() {
 
 function redirect(url) {
     //判断页面是否需要登录
-    if(false) {
+    if (false) {
         wx.redirectTo({
             url: '/pages/auth/login/login'
         })
@@ -143,83 +145,149 @@ function showErrorToast(msg) {
 
 
 
-function withData(param){
+function withData(param) {
     return param < 10 ? '0' + param : '' + param;
-   }
-   function getLoopArray(start,end){
+}
+
+function getLoopArray(start, end) {
     var start = start || 0;
     var end = end || 1;
     var array = [];
     for (var i = start; i <= end; i++) {
-    array.push(withData(i));
+        array.push(withData(i));
     }
     return array;
-   }
-   function getMonthDay(year,month){
-    var flag = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0), array = null;
-    
+}
+
+function getMonthDay(year, month) {
+    var flag = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0),
+        array = null;
+
     switch (month) {
-    case '01':
-    case '03':
-    case '05':
-    case '07':
-    case '08':
-    case '10':
-    case '12':
-     array = getLoopArray(1, 31)
-     break;
-    case '04':
-    case '06':
-    case '09':
-    case '11':
-     array = getLoopArray(1, 30)
-     break;
-    case '02':
-     array = flag ? getLoopArray(1, 29) : getLoopArray(1, 28)
-     break;
-    default:
-     array = '月份格式不正确，请重新输入！'
+        case '01':
+        case '03':
+        case '05':
+        case '07':
+        case '08':
+        case '10':
+        case '12':
+            array = getLoopArray(1, 31)
+            break;
+        case '04':
+        case '06':
+        case '09':
+        case '11':
+            array = getLoopArray(1, 30)
+            break;
+        case '02':
+            array = flag ? getLoopArray(1, 29) : getLoopArray(1, 28)
+            break;
+        default:
+            array = '月份格式不正确，请重新输入！'
     }
     return array;
-   }
-   function getNewDateArry(){
+}
+
+function getNewDateArry() {
     // 当前时间的处理
     var newDate = new Date();
     var year = withData(newDate.getFullYear()),
-     mont = withData(newDate.getMonth() + 1),
-     date = withData(newDate.getDate()),
-     hour = withData(newDate.getHours()),
-     minu = withData(newDate.getMinutes()),
-     seco = withData(newDate.getSeconds());
-    
+        mont = withData(newDate.getMonth() + 1),
+        date = withData(newDate.getDate()),
+        hour = withData(newDate.getHours()),
+        minu = withData(newDate.getMinutes()),
+        seco = withData(newDate.getSeconds());
+
     return [year, mont, date, hour, minu, seco];
-   }
-   function dateTimePicker(startYear,endYear,date) {
+}
+
+function dateTimePicker(startYear, endYear, date) {
     // 返回默认显示的数组和联动数组的声明
-    var dateTime = [], dateTimeArray = [[],[],[],[],[],[]];
+    var dateTime = [],
+        dateTimeArray = [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ];
     var start = startYear || 1978;
     var end = endYear || 2100;
     // 默认开始显示数据
     var defaultDate = date ? [...date.split(' ')[0].split('-'), ...date.split(' ')[1].split(':')] : getNewDateArry();
     // 处理联动列表数据
     /*年月日 时分秒*/
-    dateTimeArray[0] = getLoopArray(start,end);
+    dateTimeArray[0] = getLoopArray(start, end);
     dateTimeArray[1] = getLoopArray(1, 12);
     dateTimeArray[2] = getMonthDay(defaultDate[0], defaultDate[1]);
     dateTimeArray[3] = getLoopArray(0, 23);
     dateTimeArray[4] = getLoopArray(0, 59);
     dateTimeArray[5] = getLoopArray(0, 59);
-    
-    dateTimeArray.forEach((current,index) => {
-    dateTime.push(current.indexOf(defaultDate[index]));
+
+    dateTimeArray.forEach((current, index) => {
+        dateTime.push(current.indexOf(defaultDate[index]));
     });
-    
+
     return {
-    dateTimeArray: dateTimeArray,
-    dateTime: dateTime
+        dateTimeArray: dateTimeArray,
+        dateTime: dateTime
     }
-   }
-  
+}
+
+/**
+ * 该函数是处理以0.1的精度自增时，会出现小数相加损失精度的问题
+ */
+//定义一个加法函数
+function add() {
+    let args = arguments //获取所有的参数
+   // var lens = args.length //获取参数的长度
+    let d = 0 //定义小数位的初始长度，默认为整数，即小数位为0
+    let sum = 0 //定义sum来接收所有数据的和
+    //循环所有的参数
+    for (let key in args) { //遍历所有的参数
+        //把数字转为字符串
+        let str = "" + args[key];
+        if (str.indexOf(".") != -1) { //判断数字是否为小数
+            //获取小数位的长度
+            let temp = str.split(".")[1].length;
+            //比较此数的小数位与原小数位的长度，取小数位较长的存储到d中
+            d = d < temp ? temp : d;
+        }
+    }
+    //计算需要乘的数值
+    let m = Math.pow(10, d);
+    //遍历所有参数并相加
+    for (let key in args) {
+        sum += args[key] * m;
+    }
+    //返回结果
+    return sum / m;
+}
+
+/**
+ * 处理js中相减时的小数问题
+ * @param {num1} num1 
+ * @param {num2} num2 
+ */
+function decrease(num1, num2) {
+    let baseNum, baseNum1, baseNum2;
+    let precision; // 精度
+    try {
+        baseNum1 = num1.toString().split(".")[1].length;
+    } catch (e) {
+        baseNum1 = 0;
+    }
+    try {
+        baseNum2 = num2.toString().split(".")[1].length;
+    } catch (e) {
+        baseNum2 = 0;
+    }
+    baseNum = Math.pow(10, Math.max(baseNum1, baseNum2));
+    precision = (baseNum1 >= baseNum2) ? baseNum1 : baseNum2;
+    return ((num1 * baseNum - num2 * baseNum) / baseNum).toFixed(1);
+}
+
 module.exports = {
     formatTime,
     request,
@@ -230,4 +298,6 @@ module.exports = {
     getUserInfo,
     dateTimePicker,
     getMonthDay,
+    add,
+    decrease,
 }
