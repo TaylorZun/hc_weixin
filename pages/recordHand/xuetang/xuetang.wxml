@@ -3,7 +3,7 @@
     <view class="section">
         <view class="picker">测量时间</view>
         <view class="picker2">
-            <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+            <picker name="cltime" mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
                 <view class="datetime">
                     {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
                 </view>
@@ -18,7 +18,7 @@
                 <image class="del1" src="/images/jian.png" />
             </view>
            <!-- 这个写法也可以  <view class="data">{{sugardata}}   mmol/L</view>    -->
-             <view class="data1"><input class="data" type="digit" value="{{sugardata}}  mmol/L"  /></view> 
+             <view class="data1"><input name="sugardata" class="data" type="digit" value="{{sugardata}}  mmol/L"  /></view> 
             <view class="add" bindtap="addSugar">
                 <image class="add1" src="/images/jia.png" />
             </view>
@@ -28,7 +28,7 @@
     <view class="section">
         <view class="picker">时间点</view>
         <view class="picker2">
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <picker name="timedian" bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
                 <view class="time">{{array[index]}}</view>
             </picker>
         </view>
@@ -37,7 +37,7 @@
     <view class="section2">
         <view class="section_title">备注</view>
         <view class="input">
-            <input name="input" placeholder="请添加备注信息" />
+            <input name="beizhu" placeholder="请添加备注信息" />
         </view>
     </view>
         <view class="hr"></view>

@@ -1,5 +1,7 @@
 // pages/recordHand/xuetang/xuetang.js
-var dateTimePicker = require('../../../utils/utils.js')
+var app = getApp()
+var util = require('../../../utils/utils.js')
+var api = require('../../../config/api.js')
 
 Page({
 
@@ -68,7 +70,7 @@ Page({
       dateArr = this.data.dateTimeArray1;
 
     arr[e.detail.column] = e.detail.value;
-    dateArr[2] = dateTimePicker.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
+    dateArr[2] = util.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
 
     this.setData({
       dateTimeArray1: dateArr,
@@ -93,7 +95,7 @@ Page({
    */
   onLoad: function (options) {
     // 获取完整的年月日 时分秒，以及默认显示的数组
-    var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
+    var obj1 = util.dateTimePicker(this.data.startYear, this.data.endYear);
     // 精确到分的处理，将数组的秒去掉
     var lastArray = obj1.dateTimeArray.pop();
     var lastTime = obj1.dateTime.pop();
@@ -111,7 +113,7 @@ Page({
    */
 
   addSugar: function () {
-    let sugardata = dateTimePicker.add(this.data.sugardata, 0.1)
+    let sugardata = util.add(this.data.sugardata, 0.1)
     // console.log(sugardata)
     let that = this
     that.setData({
@@ -120,7 +122,7 @@ Page({
   },
 
   delSugar: function () {
-    let sugardata = dateTimePicker.decrease(this.data.sugardata, 0.1)
+    let sugardata = util.decrease(this.data.sugardata, 0.1)
     let that = this
     that.setData({
       sugardata: sugardata
@@ -190,9 +192,10 @@ Page({
    */
   formSubmit: function (e) {
     let that = this
+    console.log(e.detail.value)
     let formData = e.detail.value
     wx.request({
-      url: '',
+      url: api.SugarRecord,
       data: formData,
       header: {
         'Content-Type': 'application/json'
