@@ -18,7 +18,8 @@
                 <image class="del1" src="/images/jian.png" />
             </view>
            <!-- 这个写法也可以  <view class="data">{{sugardata}}   mmol/L</view>    -->
-             <view class="data1"><input name="sugardata" class="data" type="digit" value="{{sugardata}}  mmol/L"  /></view> 
+             <view class="data1"><input name="sugardata" class="data" type="digit" value="{{sugardata}}"  /></view>
+             <view class="mol"> mmol/L</view> 
             <view class="add" bindtap="addSugar">
                 <image class="add1" src="/images/jia.png" />
             </view>

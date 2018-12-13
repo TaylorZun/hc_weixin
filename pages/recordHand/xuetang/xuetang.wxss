@@ -56,7 +56,7 @@
 .del1 {
     height: 55rpx;
     width: 55rpx;
-    padding-left: 180rpx;
+    padding-left: 140rpx;
     padding-right: 30rpx;
 
 }
@@ -64,8 +64,8 @@
 .data {
     font-size: 40rpx;
     padding-left: 30rpx;
-    padding-right: 30rpx;
-    width:220rpx;
+    padding-right: 40rpx;
+    width:100rpx;
     background-color: mediumaquamarine;
 }
 .add1 {

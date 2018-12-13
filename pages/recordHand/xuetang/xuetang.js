@@ -192,16 +192,17 @@ Page({
    */
   formSubmit: function (e) {
     let that = this
-    console.log(e.detail.value)
+    //console.log(e.detail.value)
     let formData = e.detail.value
     wx.request({
       url: api.SugarRecord,
       data: formData,
+      method: 'POST',
       header: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        console.log(res.data)
+       // console.log(res.data)
         that.modalTap()
       }
     })
