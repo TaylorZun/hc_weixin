@@ -192,14 +192,15 @@ Page({
    */
   formSubmit: function (e) {
     let that = this
-    //console.log(e.detail.value)
+    console.log(e.detail.value)
+    const celiangtime = e.detail.value.cltime
     let formData = e.detail.value
     wx.request({
       url: api.SugarRecord,
       data: formData,
       method: 'POST',
       header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
        // console.log(res.data)
