@@ -1,6 +1,8 @@
 // pages/recordVoice/xuetang/xuetang.js
 //获取应用实例
 const app = getApp()
+const util = require('../../../utils/utils.js')
+const api = require('../../../config/api.js')
 
 const recorderManager = wx.getRecorderManager()
 // recorderManager.onStart(() => {
@@ -41,7 +43,7 @@ Page({
     recorderManager.start({
       sampleRate: 16000, //采样率
       numberOfChannels: 1,//指定录音通道数
-      encodeBitRate: 96000 ,//编码码率
+     // encodeBitRate: 96000 ,//编码码率
       format: 'mp3',
       frameSize: 50
     })
@@ -54,7 +56,7 @@ Page({
     recorderManager.onStop((res) => {
       const { tempFilePath } = res
       wx.uploadFile({
-        url: 'http://10.31.5.132:8000/baiduAI2/recognition',
+        url: SugarAsr,
         filePath:tempFilePath,
         name: 'file',
         success(res){
