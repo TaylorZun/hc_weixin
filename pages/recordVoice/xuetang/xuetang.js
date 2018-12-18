@@ -56,7 +56,7 @@ Page({
     recorderManager.onStop((res) => {
       const { tempFilePath } = res
       wx.uploadFile({
-        url: SugarAsr,
+        url: api.SugarAsr,
         filePath:tempFilePath,
         name: 'file',
         success(res){
