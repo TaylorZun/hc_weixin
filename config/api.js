@@ -1,13 +1,14 @@
 /*
- * @Description: In User Settings Edit
+ * @Description: 与后台连接的统一的API
  * @Author: pxf
  * @Date: 2018-12-01 16:28:17
- * @LastEditTime: 2018-12-08 16:27:43
- * @LastEditors: 这个是与后台的链接接口部分，统一在这里进行处理
+ * @LastEditTime: 2018-12-18 17:16:23
+ * @LastEditors: Please set LastEditors
  */
 
 const ApiRootUrl = 'http://127.0.0.1:8360/api/';
 
 module.exports = {
-    SugarRecord: ApiRootUrl + 'sugar/post'
+    SugarRecord: ApiRootUrl + 'sugar/sugarhand' ,   //文件名+action名称  手动记录血糖
+    SugarAsr: ApiRootUrl + 'asr/asr' //语音记录血糖
 }
