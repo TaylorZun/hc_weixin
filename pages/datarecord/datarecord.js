@@ -42,7 +42,7 @@ Page({
             {
               images: "/images/datarecordicon/shoudongshuru.png",
               content: "手动",
-              url: "../addFunction/addFunction",
+              url: "../recordHand/xueya/xueya",
             },
           ]
         },
