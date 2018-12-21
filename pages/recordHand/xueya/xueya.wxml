@@ -1,2 +1,64 @@
-<!--pages/recordHand/xueya/xueya.wxml-->
-<text>pages/recordHand/xueya/xueya.wxml</text>
+<!-- 手动添加血压测量 -->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+        <view class="picker">测量时间</view>
+        <view class="picker2">
+            <picker name="cltime" mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+                <view class="datetime">
+                    {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="section1">
+        <view class="wenzi">高压（收缩压）</view>
+        <view class="pressure">
+            <view class="del" bindtap="delHypertention">
+                <image class="del1" src="/images/jian.png" />
+            </view>
+            <view class="data1">
+                <input name="highpressure" class="data" type="digit" value="{{highpressure}}" />
+            </view>
+            <view class="mol">mmHg</view>
+            <view class="add" bindtap="addHypertention">
+                <image class="add1" src="/images/jia.png" />
+            </view>
+        </view>
+    </view>
+     <view class="section1">
+        <view class="wenzi">低压（舒张压）</view>
+        <view class="pressure">
+            <view class="del" bindtap="delHypotention">
+                <image class="del1" src="/images/jian.png" />
+            </view>
+            <view class="data1">
+                <input name="lowpressure" class="data" type="digit" value="{{lowpressure}}" />
+            </view>
+            <view class="mol">mmHg</view>
+            <view class="add" bindtap="addHypotention">
+                <image class="add1" src="/images/jia.png" />
+            </view>
+        </view>
+    </view>
+    
+    <view class="hr"></view>
+    <view class="section2">
+        <view class="section_title">备注</view>
+        <view class="input">
+            <input name="beizhu" placeholder="请添加备注信息" />
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="btn">
+        <button form-type="submit" type="primary">保存数据</button>
+    </view>
+</form>
+<!-- 提示框部分设置 -->
+<toast hidden="{{toastHidden}}" bindchange="toastChange">{{notice_str}}</toast>
+<view class="page_bd">
+    <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm" bindcancel="cancel">
+        确认提交吗？
+    </modal>
+</view>
