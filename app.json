@@ -20,7 +20,8 @@
     "pages/recordMachine/xueya/xueya",
     "pages/recordVoice/xuetang/xuetang",
     "pages/recordVoice/xueya/xueya",
-    "pages/diet/diet"
+    "pages/diet/diet",
+    "pages/message/message"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -55,7 +56,7 @@
         "text": "圈子"
       },
       {
-        "pagePath": "pages/zixun/zixun",
+        "pagePath": "pages/message/message",
         "iconPath": "images/icon/dialogs.png",
         "selectedIconPath": "images/icon/dialog.png",
         "text": "咨询"
