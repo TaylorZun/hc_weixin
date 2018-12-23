@@ -1,0 +1,20 @@
+<!-- 咨询页面的小卡片 -->
+<view class="container">
+    <view class="search">
+        <input class="input" type="text" bindconfirm="getdoctorList" placeholder-style="color: darkgray" placeholder="请输入医院，医生或疾病名称检索" confirm-type="search" />
+    </view>
+    <view class="hr"></view>
+    <view class="doctor">
+        <view class="doctorList" wx:for="{{doctorList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+            <view class="card">
+                <navigator>
+                    <view class="name">{{item.name}}</view>
+                    <view class="hospital">{{item.hospital}}</view>
+                    <view class="faqnum">问诊量：{{item.faqnum}}</view>
+                    <view class="master">{{item.master}}</view>
+                </navigator>
+            </view>
+            <view class="hr"></view>
+        </view>
+    </view>
+</view>

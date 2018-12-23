@@ -1,0 +1,11 @@
+.hr {
+    height: 10rpx;
+    background-color: #F5F5F5;
+}
+
+.input {
+    height: 40rpx;
+    border: 1rpx solid darkgray;
+    width: 700rpx;
+    border-radius: 40rpx;
+}
