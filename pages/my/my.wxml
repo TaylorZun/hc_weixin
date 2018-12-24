@@ -17,7 +17,7 @@
         <view class="nav-item">
             <view>
                 <navigator>
-                    <image src="/images/my/head.jpg"></image>
+                    <image src="/images/my/zixun.png"></image>
                 </navigator>
             </view>
             <view>我的咨询</view>
@@ -25,7 +25,7 @@
         <view class="nav-item">
             <view>
                 <navigator>
-                    <image src="/images/my/head.jpg"></image>
+                    <image src="/images/my/wodejiankangdangan.png"></image>
                 </navigator>
             </view>
             <view>健康档案</view>
@@ -33,7 +33,7 @@
         <view class="nav-item">
             <view>
                 <navigator url="../diet/diet">
-                    <image src="/images/my/head.jpg" />
+                    <image src="/images/my/yinshifangan.png" />
                 </navigator>
             </view>
             <view>饮食方案</view>

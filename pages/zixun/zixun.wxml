@@ -1,17 +1,31 @@
 <!-- 咨询页面的小卡片 -->
 <view class="container">
     <view class="search">
-        <input class="input" type="text" bindconfirm="getdoctorList" placeholder-style="color: darkgray" placeholder="请输入医院，医生或疾病名称检索" confirm-type="search" />
+        <input class="input" type="text" bindconfirm="getdoctorList" placeholder-style="color: darkgray; position:" placeholder="请输入医院，医生或疾病名称检索" confirm-type="search" />
     </view>
     <view class="hr"></view>
     <view class="doctor">
         <view class="doctorList" wx:for="{{doctorList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
             <view class="card">
-                <navigator>
+                <navigator url="../doctorDetail/doctorDetail?id={{item.id}}">
+                <view class="cc">
+                <view class="left"><image class="img" src="{{item.avatar}}" /></view>
+                <view class="right">
+                <view class="c1">
                     <view class="name">{{item.name}}</view>
+                    <view class="zhicheng">{{item.zhicheng}}</view>
+                    </view>
+                    <view class="c1">
                     <view class="hospital">{{item.hospital}}</view>
+                    <view class="keshi">{{item.keshi}}</view>
+                    </view>
+                    <view class="c1">
                     <view class="faqnum">问诊量：{{item.faqnum}}</view>
+                    <view class="evaluation">好评率： {{item.evaluation}}</view>
+                    </view>
                     <view class="master">{{item.master}}</view>
+                    </view>
+                    </view>
                 </navigator>
             </view>
             <view class="hr"></view>

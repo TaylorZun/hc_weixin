@@ -1,0 +1,49 @@
+<!-- 首页页面信息.wxml -->
+<view>
+    <!-- 下面是轮播图部分 -->
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="5000">
+        <swiper-item>
+            <image src="/images/swiper/a1.jpg" />
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/swiper/a2.png" />
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/swiper/a3.jpg" />
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/swiper/a4.jpeg" />
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 下面是选项组 -->
+<view>
+    <view class="nav">
+        <view class="nav_item">
+            <view>
+                <navigator url="../zixun/zixun">
+                    <image src="/images/swiper/zixun.png" class="img" />
+                </navigator>
+            </view>
+            <view>医师咨询</view>
+        </view>
+        <view class="nav_item">
+            <view>
+                <navigator>
+                    <image src="/images/swiper/yuce.png" class="img" />
+                </navigator>
+            </view>
+            <view>风险预测</view>
+        </view>
+        <view class="nav_item">
+            <view>
+                <navigator>
+                    <image src="/images/swiper/tizhi.png" class="img" />
+                </navigator>
+            </view>
+            <view>体质辨识</view>
+        </view>
+    </view>
+</view>
+
+<!--下面是其他部分-->

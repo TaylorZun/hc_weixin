@@ -40,6 +40,7 @@ Page({
 
   startRecord(e){
     this.setData({ recording: true })
+
     recorderManager.start({
       sampleRate: 16000, //采样率
       numberOfChannels: 1,//指定录音通道数
@@ -57,7 +58,7 @@ Page({
       const { tempFilePath } = res
       wx.uploadFile({
         url: api.SugarAsr,
-        filePath:tempFilePath,
+        filePath: tempFilePath,
         name: 'file',
         success(res){
           let data = typeof res.data === 'string'?JSON.parse(res.data):res.data

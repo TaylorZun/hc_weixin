@@ -1,0 +1,36 @@
+<!--sugar.wxml  血糖记录分页面-->
+ <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section__ctn">
+        <image style="width: 200px; height: 200px; background-color: #eeeeee;" 
+        mode="scaleToFill" src="{{src}}"></image>
+      </view>
+  
+  <view class="section">
+  <picker mode="date" value="{{dateTime1}}" start="2018-09-01" end="2019-09-01" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+    <view class="picker">
+      时间 :<view> {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}  </view>
+    </view>
+  </picker>
+  
+</view>
+
+
+   <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      时段 :<view>{{array[index]}}</view>
+    </view>
+  </picker>
+</view>
+
+
+  <view class="section">
+    <view class="section__title">备注</view>
+    <input name="input" placeholder="" />
+  </view>
+
+  <view class="btn">
+    <button formType="submit" type="primary">提交</button>
+  </view>
+ </form>
+  

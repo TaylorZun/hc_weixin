@@ -13,5 +13,6 @@
     <view class="img1" bindtap="stopRecord" wx:if="{{recording}}">
         <image class="img" mode="aspectFill" src="/images/datarecordicon/yuyin.gif" />
     </view>
+     
     <view class="footer">点击按钮，说出你今天的血糖状况</view>
 </view>
