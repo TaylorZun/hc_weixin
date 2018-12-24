@@ -21,7 +21,8 @@
     "pages/recordVoice/xuetang/xuetang",
     "pages/recordVoice/xueya/xueya",
     "pages/diet/diet",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/doctorDetail/doctorDetail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
