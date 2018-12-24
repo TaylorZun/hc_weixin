@@ -2,7 +2,7 @@
  * @Description: 与后台连接的统一的API
  * @Author: pxf
  * @Date: 2018-12-01 16:28:17
- * @LastEditTime: 2018-12-24 10:47:20
+ * @LastEditTime: 2018-12-24 17:24:07
  * @LastEditors: Please set LastEditors
  */
 
@@ -15,5 +15,6 @@ module.exports = {
     SugarRecord: ApiRootUrl + 'sugar/sugarhand' ,   //文件名+action名称  手动记录血糖
     SugarAsr: ApiRootUrl + 'asr/asrvoice', //语音记录血糖
     PressureRecord: ApiRootUrl + 'bloodpressure/pressurehand',
-    DoctorList: ApiRootUrl + 'zixun/getdoctorlist'
+    DoctorList: ApiRootUrl + 'zixun/getdoctorlist',
+    DoctorDetail: ApiRootUrl + 'zixun/getdoctordetail'
 }
