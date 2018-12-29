@@ -1,2 +1,62 @@
-<!--pages/doctorDetail/doctorDetail.wxml-->
-<text>pages/doctorDetail/doctorDetail.wxml</text>
+<!-- pages/doctorDetail/doctorDetail.wxml -->
+<view class="container">
+    <view class="head">
+        <view class="left">
+            <image class="img" src="{{info.avatar}}" />
+        </view>
+        <view class="right">
+            <view class="name">{{info.name}}</view>
+            <view class="c1">
+                <view class="zhicheng">{{info.zhicheng}}</view>
+                <view class="keshi">{{info.keshi}}</view>
+            </view>
+            <view class="c1">
+                <view class="faqnum">问诊数：{{info.faqnum}}</view>
+                <view class="evaluation">好评率：{{info.evaluation}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="master">{{info.master}}</view>
+    <view class="hr"></view>
+    <view class="service">
+        <view class="h2">
+            <view class="aa1">问诊服务</view>
+            <view class="aa2">须知 ？</view>
+        </view>
+        <view class="hr"></view>
+        <view class="h2">
+            <view>
+                <image class="img" src="/images/Group-.png" />
+            </view>
+            <view class="wenzi">
+                <view class="t1">图文问诊</view>
+                <view class="t2">发送图文信息或者语音与医生沟通</view>
+            </view>
+            <view class="pay">90元/次</view>
+        </view>
+        <view class="hr"></view>
+        <view class="h2">
+            <view>
+                <image class="img" src="/images/shipin.png" />
+            </view>
+            <view class="wenzi">
+                <view class="t1">视频问诊</view>
+                <view class="t2">预约特定时间与医生进行视频问诊</view>
+            </view>
+            <view class="pay">200元/次</view>
+        </view>
+        <view class="hr"></view>
+        <view class="h2">
+            <view>
+                <image class="img" src="/images/dianhua.png" />
+            </view>
+            <view class="wenzi">
+                <view class="t1">电话问诊</view>
+                <view class="t2">快速问诊，下单后24小时接通电话</view>
+            </view>
+            <view class="pay">200元/次</view>
+        </view>
+        <view class="hr"></view>
+    </view>
+</view>
