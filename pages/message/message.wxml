@@ -1,2 +1,15 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view class="container">
+<view class="messageList" wx:for="{{message}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+<navigator>
+<view class="aa1">
+<view><image class="img" src="{{item.avatar1}}" /></view>
+<view class="right">
+<view class="name">{{item.doctorname}}</view>
+<view class="content">{{item.content1}}</view>
+</view>
+</view>
+</navigator>
+<view class="hr"></view>
+</view>
+</view>
