@@ -47,3 +47,16 @@
 </view>
 
 <!--下面是其他部分-->
+<view class="other">
+<view class="medicine">
+<view class="wenzi">用药提醒</view>
+<view class="aa1">
+<view>药物名：{{medicine[0].name}}</view>
+<view class="aa2">服用时间： {{medicine[0].time}}</view>
+</view>
+<view class="aa1">
+<view>用药频次： {{medicine[0].pinci}}</view>
+<view class="aa2">剂量： {{medicine[0].num}}</view>
+</view>
+</view>
+</view>

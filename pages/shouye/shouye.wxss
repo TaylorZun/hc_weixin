@@ -27,3 +27,32 @@ swiper image{
     width: 70rpx;
     height: 70rpx;
 }
+
+.other{
+    margin-top: 20rpx;
+}
+
+.wenzi{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35rpx;
+    color: rgb(37, 226, 110);
+    margin-left: 10rpx;
+}
+
+.aa1{
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+    color: darkgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 15rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.aa2{
+    margin-left: 50rpx;
+}
+.medicine{
+    border: 1rpx solid rgb(80, 145, 199);
+    border-radius: 20rpx;
+}
