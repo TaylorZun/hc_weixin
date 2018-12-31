@@ -2,7 +2,7 @@
  * @Description: 与后台连接的统一的API
  * @Author: pxf
  * @Date: 2018-12-01 16:28:17
- * @LastEditTime: 2018-12-24 17:24:07
+ * @LastEditTime: 2018-12-31 14:57:32
  * @LastEditors: Please set LastEditors
  */
 
@@ -14,7 +14,9 @@ const ApiRootUrl = 'http://127.0.0.1:8360/api/';
 module.exports = {
     SugarRecord: ApiRootUrl + 'sugar/sugarhand' ,   //文件名+action名称  手动记录血糖
     SugarAsr: ApiRootUrl + 'asr/asrvoice', //语音记录血糖
-    PressureRecord: ApiRootUrl + 'bloodpressure/pressurehand',
-    DoctorList: ApiRootUrl + 'zixun/getdoctorlist',
-    DoctorDetail: ApiRootUrl + 'zixun/getdoctordetail'
+    PressureRecord: ApiRootUrl + 'bloodpressure/pressurehand',  //血压记录
+    DoctorList: ApiRootUrl + 'zixun/getdoctorlist',  //获取医生列表
+    DoctorDetail: ApiRootUrl + 'zixun/getdoctordetail',  //获取医生详细信息
+    MedicineShow: ApiRootUrl + 'medicine/getmedicine',  //获取用药记录展示在首页
+    Message: ApiRootUrl + 'message/msghistory'  //历史消息
 }
