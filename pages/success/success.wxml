@@ -1,2 +1,9 @@
 <!--pages/success/success.wxml-->
-<text>pages/success/success.wxml</text>
+<view class="contain">
+<view class="a1"><image class="img" src="/images/yishengjianyi.png" /></view>
+<view class="a2">{{result[0].result}}</view>
+<view class="a3">
+<button class="continue" type="warn" plain="{{true}}" bindtap="continue">继续测量</button>
+<button class="back" type="warn" plain="{{true}}" bindtap="continue">回到首页</button>
+</view>
+</view>

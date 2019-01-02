@@ -1,4 +1,7 @@
 // pages/success/success.js
+const util = require('../../utils/utils')
+const api = require('../../config/api.js')
+
 Page({
 
   /**
@@ -17,6 +20,20 @@ Page({
       id: parseInt(options.id)
     })
 
+    this.getAnalysisresult()
+
+  },
+  getAnalysisresult: function(){
+    let that = this
+   util.request(api.getpressureResult, {id: that.data.id}).then(function(res) {
+     console.log(res)
+     if(res.errno === 0 ){
+       that.setData({
+         result: res.data
+       })
+     }
+   })
+    
   },
 
   /**
@@ -31,6 +48,12 @@ Page({
    */
   onShow: function () {
 
+  },
+
+  continue:function() {
+    wx.switchTab({
+      url: '../datarecord/datarecord'
+    })
   },
 
   /**
