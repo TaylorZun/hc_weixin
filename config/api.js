@@ -2,7 +2,7 @@
  * @Description: 与后台连接的统一的API
  * @Author: pxf
  * @Date: 2018-12-01 16:28:17
- * @LastEditTime: 2018-12-31 14:57:32
+ * @LastEditTime: 2019-01-02 10:28:06
  * @LastEditors: Please set LastEditors
  */
 
@@ -18,5 +18,6 @@ module.exports = {
     DoctorList: ApiRootUrl + 'zixun/getdoctorlist',  //获取医生列表
     DoctorDetail: ApiRootUrl + 'zixun/getdoctordetail',  //获取医生详细信息
     MedicineShow: ApiRootUrl + 'medicine/getmedicine',  //获取用药记录展示在首页
-    Message: ApiRootUrl + 'message/msghistory'  //历史消息
+    Message: ApiRootUrl + 'message/msghistory' , //历史消息
+    getpressureResult: ApiRootUrl + 'bloodpressure/analyze'  //分析
 }
