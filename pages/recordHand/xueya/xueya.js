@@ -127,6 +127,9 @@ Page({
       toastHidden: false,
       notice_str: '提交成功'
     })
+    wx.navigateTo({
+      url: '../../success/success'
+    })
   },
 
   cancel: function (e) {
