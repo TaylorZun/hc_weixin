@@ -3,13 +3,26 @@
     background-color: #F5F5F5;
 }
 
-.input {
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top:20rpx;
     padding-left: 10rpx;
-    height: 40rpx;
+    height: 60rpx;
     border: 1rpx solid green;
-    width: 700rpx;
+    width: 95%;
     border-radius: 40rpx;
+}
+.input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 30rpx;
+}
+.search image{
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 20rpx;
+    padding-top: 10rpx;
 }
 
 .name {

@@ -26,7 +26,7 @@ Page({
   getDoctordetail: function() {
     let that = this
     util.request(api.DoctorDetail, { id: that.data.id}).then(function (res) {
-      console.log(res)
+     // console.log(res)
       if(res.errno === 0) {
         that.setData({
           info: res.data.info
