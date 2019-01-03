@@ -1,4 +1,4 @@
-// pages/doctorDetail/doctorDetail.js
+// pages/orderConfirm/orderConfirm.js
 const util = require('../../utils/utils.js')
 const api = require('../../config/api.js')
 
@@ -8,9 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    toastHidden: true,
-    modalHidden: true,
-    notice_str: '',
+
   },
 
   /**
@@ -36,25 +34,6 @@ Page({
           info: res.data.info
         })
       }
-    })
-  },
-
-  toastChange: function(e) {
-    this.setData({
-      toastHidden: true
-    })
-  },
-
-  modalTap: function(e) {
-    this.setData({
-      modalHidden: false
-    })
-  },
-  confirm:function(e) {
-    this.setData({
-      modalHidden: true,
-      toastHidden: false,
-      notice_str: '购买成功'
     })
   },
 

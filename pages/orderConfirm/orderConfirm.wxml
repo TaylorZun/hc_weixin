@@ -1,0 +1,47 @@
+<!-- pages/orderConfirm/orderConfirm.wxml -->
+<view class="container">
+    <view class="a2">
+        <view class="b1">
+            <image src="{{info.avatar}}" />
+        </view>
+        <view class="b2">
+            <view class="name">{{info.name}}医师</view>
+            <view class="service">图文问诊服务</view>
+            <view class="price">￥ 90</view>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="a2">
+        <view class="shouquan">将个人体征数据授权给医生查看</view>
+        <view class="btn">
+            <switch type="switch" bindchange="switchChange" />
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="a2">
+        <view class="left">健康券</view>
+        <view class="right">无可用 ></view>
+    </view>
+    <view class="hr"></view>
+    <view class="a2">
+        <view class="bean">健康豆</view>
+        <view class="intro">
+            <view>共235个，可用0个</view>
+            <view>未满500，暂不可使用</view>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="a2">
+        <view class="left">问诊金额</view>
+        <view class="right">￥90.00</view>
+    </view>
+    <view class="a2">
+        <view class="left">优惠金额</view>
+        <view class="right">-￥00.00</view>
+    </view>
+    <view class="hr"></view>
+    <view class="pay">实付金额： ￥90.00</view>
+    <view class="button">
+        <button type="primary" bindtap="wechatpay">微信支付</button>
+    </view>
+</view>

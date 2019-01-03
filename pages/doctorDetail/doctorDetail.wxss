@@ -1,6 +1,6 @@
 /* pages/doctorDetail/doctorDetail.wxss */
 .hr {
-    height: 10rpx;
+    height: 8rpx;
     background-color: #F5F5F5;
 }
 
@@ -29,14 +29,14 @@
 .aa1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30rpx;
-    color: darkgray;
+    color: dark;
     margin-left: 15rpx;
 }
 .aa2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30rpx;
-    color: darkgray;
-    margin-left: 345rpx;
+    color: dark;
+    margin-left: 365rpx;
 }
 .t1{
     margin-top: 20rpx;
@@ -49,19 +49,35 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28rpx;
     color: darkgray;
+    padding-left: 15rpx;
+}
+.t3{
+    margin-top: 15rpx;
+    font-family: fantasy;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+.wenzi{
+    padding-left: 20rpx;
 }
 .pay{
     font-family: Arial, Helvetica, sans-serif;
     color: red;
     font-size: 30rpx;
     margin-top: 40rpx;
-    margin-left: 30rpx;
+    margin-left: 35rpx;
+    padding-left: 10rpx;
+    border: 1rpx solid red;
+    border-radius: 30rpx;
+    align-items: center;
+    width: 125rpx;
+    height: 55rpx;
 }
 
 .name{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30rpx;
-    margin-left: 10rpx;
+    margin-left: 15rpx;
 }
 
 .zhicheng {

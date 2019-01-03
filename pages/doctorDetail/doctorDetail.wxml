@@ -32,19 +32,21 @@
             <view class="wenzi">
                 <view class="t1">图文问诊</view>
                 <view class="t2">发送图文信息或者语音与医生沟通</view>
+                <view class="t3">问诊价格：90元/次</view>
             </view>
-            <view class="pay">90元/次</view>
+            <view class="pay"><navigator url="../orderConfirm/orderConfirm?id={{info.id}}">购买服务</navigator></view>
         </view>
         <view class="hr"></view>
-        <view class="h2">
+        <view class="h2" >
             <view>
                 <image class="img" src="/images/shipin.png" />
             </view>
             <view class="wenzi">
                 <view class="t1">视频问诊</view>
                 <view class="t2">预约特定时间与医生进行视频问诊</view>
+                 <view class="t3">问诊价格：150元/次</view>
             </view>
-            <view class="pay">200元/次</view>
+            <view class="pay"><navigator url="../orderConfirm/orderConfirm?id={{info.id}}">购买服务</navigator></view>
         </view>
         <view class="hr"></view>
         <view class="h2">
@@ -54,9 +56,17 @@
             <view class="wenzi">
                 <view class="t1">电话问诊</view>
                 <view class="t2">快速问诊，下单后24小时接通电话</view>
+                 <view class="t3">问诊价格：120元/次</view>
             </view>
-            <view class="pay">200元/次</view>
+            <view class="pay"><navigator url="../">购买服务</navigator></view>
         </view>
         <view class="hr"></view>
     </view>
+</view>
+<!-- 提示框部分设置 -->
+<toast hidden="{{toastHidden}}" bindchange="toastChange">{{notice_str}}</toast>
+<view class="page_bd">
+    <modal title="购买确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm" bindcancel="cancel">
+        确认购买此项咨询服务？
+    </modal>
 </view>
