@@ -60,3 +60,28 @@
 </view>
 </view>
 </view>
+
+<view class="other">
+<view class="medicine">
+<view class="wenzi">昨日运动</view>
+<view class="aa1">
+<view>运动类型：{{sport[0].category}}</view>
+<view class="aa2">运动时间： {{sport[0].long}}分钟</view>
+</view>
+<view class="aa1">
+<view>消耗热量： {{sport[0].cal}}大卡</view>
+<view class="aa2">表现的不错，继续坚持呦</view>
+</view>
+</view>
+</view>
+
+<view class="other">
+<view class="medicine">
+<view class="wenzi">昨日血糖</view>
+<view class="aa1">
+<view>{{sugar[0].sugardata}}mmol/L</view>
+<view class="aa2">时段： {{sugar[0].timedian}}</view>
+</view>
+<view class="aa3">今天也要记得坚持测量哦</view>
+</view>
+</view>

@@ -31,6 +31,37 @@ Page({
       }
     })
 
+    wx.request({
+      url: api.sport,
+      method:'GET',
+      header: {
+        'content-type': 'application/json',
+      },
+      success: function(res) {
+        console.log(res)
+        if(res.data.errno === 0) {
+          that.setData({
+            sport: res.data.data
+          })
+        }
+      }
+    })
+
+    wx.request({
+      url: api.sugar,
+      method:'GET',
+      header: {
+        'content-type': 'application/json',
+      },
+      success: function(res) {
+        console.log(res)
+        if(res.data.errno === 0) {
+          that.setData({
+            sugar: res.data.data
+          })
+        }
+      }
+    })
   },
 
   /**

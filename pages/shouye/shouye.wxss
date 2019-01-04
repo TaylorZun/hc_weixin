@@ -52,7 +52,16 @@ swiper image{
 .aa2{
     margin-left: 50rpx;
 }
+.aa3{
+    margin-left: 40rpx;
+    font-size: 30rpx;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20rpx;
+    color: darkorange;
+}
 .medicine{
     border: 1rpx solid rgb(80, 145, 199);
     border-radius: 20rpx;
+    width: 95%;
+    margin-left: 20rpx;
 }
