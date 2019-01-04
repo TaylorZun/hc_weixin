@@ -57,7 +57,7 @@
 }
 
 .button {
-    margin-top: 20rpx;
+    margin-top: 370rpx;
     width: 100%;
 }
 

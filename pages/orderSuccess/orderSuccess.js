@@ -1,7 +1,4 @@
-// pages/orderConfirm/orderConfirm.js
-const util = require('../../utils/utils.js')
-const api = require('../../config/api.js')
-
+// pages/orderSuccess/orderSuccess.js
 Page({
 
   /**
@@ -15,26 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //页面初始化，options为页面跳转带来的参数
-    var that = this
-    that.setData({
-      id: parseInt(options.id)
-    })
-    this.getDoctordetail()
-  },
 
-  getDoctordetail: function () {
-    let that = this
-    util.request(api.DoctorDetail, {
-      id: that.data.id
-    }).then(function (res) {
-      // console.log(res)
-      if (res.errno === 0) {
-        that.setData({
-          info: res.data.info
-        })
-      }
-    })
   },
 
   /**
@@ -44,10 +22,15 @@ Page({
 
   },
 
-  wechatpay:function() {
+  checkorder: function() {
+    wx.switchTab({
+      url: '../my/my'
+    })
+  },
 
-    wx.navigateTo({
-      url:'../orderSuccess/orderSuccess'
+  contactDoc: function() {
+    wx.switchTab({
+      url: '../message/message'
     })
   },
 
