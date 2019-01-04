@@ -80,6 +80,12 @@ Page({
 
   },
 
+  stopRecord2: function() {
+    wx.navigateTo({
+      url: '../../voiceResult/voiceResult'
+    })
+  },
+
 
 
   /**

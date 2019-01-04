@@ -10,7 +10,7 @@
     <view class="img1" bindtap="startRecord" wx:if="{{!recording}}">
         <image class="img" mode="aspectFill" src="/images/datarecordicon/yuyin.png" />
     </view>
-    <view class="img1" bindtap="stopRecord" wx:if="{{recording}}">
+    <view class="img1" bindtap="stopRecord2" wx:if="{{recording}}">
         <image class="img" mode="aspectFill" src="/images/datarecordicon/yuyin.gif" />
     </view>
      

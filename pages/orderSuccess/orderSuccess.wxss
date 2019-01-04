@@ -9,4 +9,5 @@
 .contactdoc .checkorder{
     width: 220rpx;
     font-size: 33rpx;
+    margin-right: 100rpx;
 }

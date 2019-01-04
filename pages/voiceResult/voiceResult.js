@@ -1,4 +1,4 @@
-// pages/orderSuccess/orderSuccess.js
+// pages/voiceResult/voiceResult.js
 Page({
 
   /**
@@ -22,25 +22,11 @@ Page({
 
   },
 
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
-  },
-
-  
-  checkorder: function() {
-    wx.switchTab({
-      url: '../my/my'
-    })
-  },
-
-  contactDoc: function() {
-    wx.switchTab({
-      url: '../message/message'
-    })
   },
 
   /**
@@ -56,8 +42,6 @@ Page({
   onUnload: function () {
 
   },
-
-
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
