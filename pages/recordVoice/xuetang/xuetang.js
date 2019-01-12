@@ -50,37 +50,40 @@ Page({
     })
   },
 
-  stopRecord(e) {
+  // stopRecord(e) {
+  //   let that = this
+  //   that.setData({ recording: false })
+  //   recorderManager.stop()
+  //   recorderManager.onStop((res) => {
+  //     const { tempFilePath } = res
+  //     wx.uploadFile({
+  //       url: api.SugarAsr,
+  //       filePath: tempFilePath,
+  //       name: 'file',
+  //       success(res){
+  //         let data = typeof res.data === 'string'?JSON.parse(res.data):res.data
+  //         if(data.ret == 0) {
+  //           that.setData({
+  //             result:data.data.data[0]
+  //           })
+  //         } else {
+  //           that.setData({
+  //             result: '我不知道你在说什么'
+  //           })
+  //         }
+  //       },
+  //       fail(err) {
+  //         console.log(err)
+  //       }
+  //     })
+  //   })
+
+  // },
+
+  stopRecord(e){
     let that = this
     that.setData({ recording: false })
     recorderManager.stop()
-    recorderManager.onStop((res) => {
-      const { tempFilePath } = res
-      wx.uploadFile({
-        url: api.SugarAsr,
-        filePath: tempFilePath,
-        name: 'file',
-        success(res){
-          let data = typeof res.data === 'string'?JSON.parse(res.data):res.data
-          if(data.ret == 0) {
-            that.setData({
-              result:data.data.data[0]
-            })
-          } else {
-            that.setData({
-              result: '我不知道你在说什么'
-            })
-          }
-        },
-        fail(err) {
-          console.log(err)
-        }
-      })
-    })
-
-  },
-
-  stopRecord2: function() {
     wx.navigateTo({
       url: '../../voiceResult/voiceResult'
     })
