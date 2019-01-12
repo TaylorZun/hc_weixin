@@ -1,2 +1,17 @@
-<!--pages/voiceResult/voiceResult.wxml-->
-<text>pages/voiceResult/voiceResult.wxml</text>
+<!-- pages/voiceResult/voiceResult.wxml -->
+<view class="container">
+    <view class="confirm">你输入的是不是</view>
+    <view class="confirm2">今天9:30测的血糖是5.6</view>
+    <view class="num">5.6</view>
+    <view class="mmol/L"></view>
+    <view class="timedian">
+        <view class="text1">时间段</view>
+        <view class="text2">早餐后  ></view>
+    </view>
+    <view class="btn">
+        <button type="primary">确认录入</button>
+    </view>
+    <view class="btn">
+        <button type="primary" plain="{{true}}">重新录入</button>
+    </view>
+</view>
