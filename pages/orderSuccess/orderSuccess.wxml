@@ -1,9 +1,15 @@
 <!-- pages/orderSuccess/orderSuccess.wxml -->
 <view class="container">
     <view class="tishi">订单支付成功！</view>
-    <view class="button">
+    <view class="button1">
         <button class="checkorder" type="warn" plain="{{true}}" bindtap="checkOrder">查看订单</button>
         <button class="contactdoc" type="warn" plain="{{true}}" bindtap="contactDoc">联系医生</button>
     </view>
+    <view class="tuijian1">
+    <view class="hr1">————</view>
+    <view class="hr2">♡</view>
     <view class="tuijian">为你推荐</view>
+    <view class="hr2">♡</view>
+    <view class="hr1">————</view>
+    </view>
 </view>

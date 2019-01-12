@@ -1,13 +1,56 @@
 /* pages/orderSuccess/orderSuccess.wxss */
-.button{
+.container {
+    width: 95%;
+}
+
+.button1 {
     display: flex;
     flex-direction: row;
     margin-top: 30rpx;
+    /* justify-content: space-between; */
 }
 
+.checkorder {
+    width: 300rpx;
+    font-size: 30rpx;
+    margin-left: 10px;
+    margin-right: 15rpx;
+    float: left;
+}
 
-.contactdoc .checkorder{
-    width: 220rpx;
-    font-size: 33rpx;
-    margin-right: 100rpx;
+.contactdoc {
+    width: 300rpx;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    margin-right: 10px;
+    float: right;
+}
+
+.tuijian {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgray;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+}
+
+.tuijian1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.hr1 {
+    height: 14rpx;
+    color: darkgray;
+    width: 120rpx;
+    /* width: 150rpx; */
+    /* background-color: #200a0a; */
+    padding-left: 15rpx;
+    padding-right: 35rpx;
+    margin-top: 30rpx;
+}
+.hr2 {
+    color: red;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    margin-top: 27rpx;
 }

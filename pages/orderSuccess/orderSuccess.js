@@ -31,7 +31,7 @@ Page({
   },
 
   
-  checkorder: function() {
+  checkOrder: function() {
     wx.switchTab({
       url: '../my/my'
     })
