@@ -1,7 +1,7 @@
 <!--pages/message/message.wxml-->
 <view class="container">
 <view class="messageList" wx:for="{{message}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
-<navigator>
+<navigator url="../chat/chat?id={{item.doctorid}}">
 <view class="aa1">
 <view><image class="img" src="{{item.avatar1}}" /></view>
 <view class="right">
