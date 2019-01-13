@@ -1,4 +1,7 @@
-// pages/voiceResult/voiceResult.js
+// pages/success/success.js
+const util = require('../../utils/utils')
+const api = require('../../config/api.js')
+
 Page({
 
   /**
@@ -12,7 +15,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+    that.setData({
+      id: parseInt(options.id)
+    })
 
+    this.getAnalysisresult()
+
+  },
+  getAnalysisresult: function(){
+    let that = this
+   util.request(api.getsugarResult, {id: that.data.id}).then(function(res) {
+     console.log(res)
+     if(res.errno === 0 ){
+       that.setData({
+         result: res.data
+       })
+     }
+   })
+    
   },
 
   /**
@@ -29,12 +50,16 @@ Page({
 
   },
 
-  confirm:function(e) {
-
-    wx.navigateTo({
-      url: '../sugarAnalyse/sugarAnalyse'
+  continue: function() {
+    wx.switchTab({
+      url: '../datarecord/datarecord'
     })
+  },
 
+  back: function() {
+    wx.switchTab({
+      url: '../shouye/shouye'
+    })
   },
 
   /**

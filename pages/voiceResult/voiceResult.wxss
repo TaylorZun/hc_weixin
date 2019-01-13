@@ -1,1 +1,56 @@
 /* pages/voiceResult/voiceResult.wxss */
+ .confirm {
+     margin-top: 50rpx;
+     margin-bottom: 40rpx;
+     font-family: Arial, Helvetica, sans-serif;
+     color: darkgray;
+     font-size: 35rpx;
+ }
+
+ .confirm2 {
+     margin-bottom: 40rpx;
+     font-family: 'Times New Roman', Times, serif;
+     color: darkkhaki;
+     font-size: 40rpx;
+
+ }
+
+ .num {
+     margin-bottom: 30rpx;
+     font-family: Arial, Helvetica, sans-serif;
+     color: green;
+     font-size: 65rpx;
+ }
+
+ .danwei{
+     color: darkgray;
+     font-size: 35rpx;
+     margin-bottom: 40rpx;
+ }
+
+ .timedian {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-bottom: 340rpx;
+     color: darkgray;
+ }
+
+ .text1 {
+     padding-left: 15rpx;
+     margin-right: 330rpx;
+ }
+ .text2 {
+     margin-right: 15rpx;
+ }
+
+ .btn {
+     margin-bottom: 40rpx;
+     border-radius: 50rpx;
+     width: 600rpx;
+ }
+
+ .hr{
+     height: 10rpx;
+     background-color: darkcyan;
+ }
