@@ -1,0 +1,4 @@
+<!--pages/quanzi/quanzi.wxml-->
+<view class="container">
+    <image src="/images/linshi/quanzi.jpg" mode="aspectFit"/>
+</view>

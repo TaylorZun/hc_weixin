@@ -1,0 +1,4 @@
+<!--pages/myorder/myorder.wxml-->
+<view class="container">
+    <image src="/images/linshi/order.jpg" mode="aspectFit"/>
+</view>

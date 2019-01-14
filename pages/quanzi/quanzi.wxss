@@ -1,0 +1,5 @@
+/* pages/quanzi/quanzi.wxss */
+image {
+    height: 1200rpx;
+    width: 700rpx;
+}
