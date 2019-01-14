@@ -6,7 +6,7 @@
             <view class="headIcon">
                 <image src="/images/my/head.jpg" style="width:90rpx;height:90rpx;"></image>
             </view>
-            <view class="name" bindtap="login">立即登录</view>
+            <view class="name" bindtap="login">Taylorzun</view>
             <view class="detail">
                 <text>></text>
             </view>
@@ -20,7 +20,7 @@
                     <image src="/images/my/zixun.png"></image>
                 </navigator>
             </view>
-            <view>我的咨询</view>
+            <view>健康豆</view>
         </view>
         <view class="nav-item">
             <view>
@@ -41,10 +41,13 @@
     </view>
     <view class="hr"></view>
     <view class="item">
-        <view class="order">我的报告</view>
-        <view class="detail2">
-            <text>></text>
-        </view>
+        <navigator url="../myorder/myorder">
+            <view class="order">我的订单</view>
+             </navigator>
+            <view class="detail2">
+                <text>></text>
+            </view>
+       
     </view>
     <view class="xian"></view>
     <view class="item">
@@ -63,6 +66,20 @@
     <view class="xian"></view>
     <view class="item">
         <view class="order">体质辨识</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item">
+        <view class="order">我的指南</view>
+        <view class="detail2">
+            <text>></text>
+        </view>
+    </view>
+    <view class="xian"></view>
+    <view class="item">
+        <view class="order">我的数据</view>
         <view class="detail2">
             <text>></text>
         </view>

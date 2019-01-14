@@ -1,0 +1,4 @@
+<!--pages/recordsport/recordsport.wxml-->
+<view class="container">
+    <image src="/images/linshi/sport.jpg" mode="aspectFit"/>
+</view>

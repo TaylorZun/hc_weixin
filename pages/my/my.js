@@ -6,7 +6,7 @@ data: {
   memberList: [
     {
       iamges: "/images/datarecordicon/shoudongshuru.png",
-      cont: "爱奇艺影视会员",
+      cont: "",
       discount: "7.5折",
       hiddena: true,
       id: "0",
@@ -27,7 +27,7 @@ data: {
     },
     {
       iamges: "/images/datarecordicon/shoudongshuru.png",      
-      cont: "腾讯视频会员",
+      cont: "会员",
       discount: "7折",
       hiddena: true,
       id: "1",
@@ -48,7 +48,7 @@ data: {
     },
     {
       iamges: "/images/datarecordicon/shoudongshuru.png",      
-      cont: "优酷视频黄金会员",
+      cont: "会员",
       discount: "8折",
       hiddena: true,
       id: "2",
@@ -69,7 +69,7 @@ data: {
     },
     {
       iamges: "/images/datarecordicon/shoudongshuru.png", 
-      cont: "搜狐视频黄金会员",
+      cont: "黄金会员",
       discount: "8折",
       hiddena: true,
       id: "3",
