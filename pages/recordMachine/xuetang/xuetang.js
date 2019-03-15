@@ -59,7 +59,7 @@ Page({
               devices: temp
             })
             console.log('发现新设备')
-            console.log('设备id:' +  devices.deviceId)
+            console.log('设备id:' +  devices[0].deviceId)
             console.log('设备name:'  + devices.name)
           })
         },
