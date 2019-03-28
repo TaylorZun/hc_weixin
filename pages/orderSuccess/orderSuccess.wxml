@@ -1,4 +1,4 @@
-<!-- pages/orderSuccess/orderSuccess.wxml -->
+<!-- pages/orderSuccess/orderSuccess.wxml 这里的推荐根据科室而推荐的-->
 <view class="container">
     <view class="tishi">订单支付成功！</view>
     <view class="button1">
@@ -11,5 +11,34 @@
     <view class="tuijian">为你推荐</view>
     <view class="hr2">♡</view>
     <view class="hr1">————</view>
+    </view>
+    <view class="doctor">
+        <view class="doctorList" wx:for="{{info}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+            <view class="card">
+                <navigator url="../doctorDetail/doctorDetail?id={{item.id}}">
+                    <view class="cc">
+                        <view class="left">
+                            <image class="img" src="{{item.avatar}}" />
+                        </view>
+                        <view class="right">
+                            <view class="c1">
+                                <view class="name">{{item.name}}</view>
+                                <view class="zhicheng">{{item.zhicheng}}</view>
+                            </view>
+                            <view class="c1">
+                                <view class="hospital">{{item.hospital}}</view>
+                                <view class="keshi">{{item.keshi}}</view>
+                            </view>
+                            <view class="c1">
+                                <view class="faqnum">问诊量：{{item.faqnum}}</view>
+                                <view class="evaluation">好评率： {{item.evaluation}}</view>
+                            </view>
+                            
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="hr"></view>
+        </view>
     </view>
 </view>

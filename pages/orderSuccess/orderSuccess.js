@@ -1,4 +1,7 @@
 // pages/orderSuccess/orderSuccess.js
+const util = require('../../utils/utils.js')
+const api = require('../../config/api.js')
+
 Page({
 
   /**
@@ -12,9 +15,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //页面初始化，options是页面跳转带来的参数
+    var that = this
+    that.setData({
+      id: parseInt(options.id)
+    })
+    this.getRecomands()
 
   },
 
+  getRecomands:function () {
+    let that = this
+    util.request(api.recomand, {
+      id: that.data.id
+    }).then(function (res) {
+      console.log(res)
+      if(res.errno === 0) {
+        that.setData({
+          info: res.data
+        })
+      }
+    })
+
+  },
+     
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -54,3 +54,98 @@
     padding-right: 20rpx;
     margin-top: 27rpx;
 }
+
+.hr {
+    height: 10rpx;
+    background-color: #F5F5F5;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:20rpx;
+    padding-left: 10rpx;
+    height: 60rpx;
+    border: 1rpx solid green;
+    width: 95%;
+    border-radius: 40rpx;
+}
+.input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 30rpx;
+}
+.search image{
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 20rpx;
+    padding-top: 10rpx;
+}
+
+.name {
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30rpx;
+    display: flex;
+    width:300rpx;
+}
+.zhicheng {
+    margin-top: 15rpx;
+    width:300rpx;
+    margin-right: 30rpx;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30rpx;
+    color: darkgray;
+
+}
+.hospital {
+    padding-top: 15rpx;
+    margin-left: 15rpx;
+    margin-right: 40rpx;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30rpx;
+    color: dimgrey;
+}
+.keshi {
+    padding-top: 15rpx;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30rpx;
+    color: darkgray;
+}
+.faqnum {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30rpx;
+    color: darkgray;
+    margin-left: 15rpx;
+    margin-top: 15rpx;
+}
+.evaluation{
+    margin-left: 35rpx;
+    margin-top: 15rpx;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30rpx;
+    color: darkgray;
+}
+.master{
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+}
+.c1 {
+    display: flex;
+    flex-direction: row;
+}
+.cc {
+    display: flex;
+    flex-direction: row;
+}
+.img{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    margin-top: 20rpx;
+    
+}
