@@ -1,6 +1,7 @@
 {
   "cloud": true,
   "pages": [
+    "pages/shouye/shouye",
     "pages/index/index",
     "pages/auth/login/login",
     "pages/userConsole/userConsole",
@@ -13,16 +14,30 @@
     "pages/sugarRecord/sugarRecord",
     "pages/zixun/zixun",
     "pages/my/my",
-    "pages/shouye/shouye",
     "pages/recordHand/xuetang/xuetang",
     "pages/recordHand/xueya/xueya",
     "pages/recordMachine/xuetang/xuetang",
     "pages/recordMachine/xueya/xueya",
+    "pages/recordMachine/sport/sport",
     "pages/recordVoice/xuetang/xuetang",
     "pages/recordVoice/xueya/xueya",
+    "pages/recordsport/recordsport",
+    "pages/recordmedicine/recordmedicine",
+    "pages/recorddiet/recorddiet",
+    "pages/myorder/myorder",
+    "pages/quanzi/quanzi",
     "pages/diet/diet",
     "pages/message/message",
-    "pages/doctorDetail/doctorDetail"
+    "pages/doctorDetail/doctorDetail",
+    "pages/success/success",
+    "pages/orderConfirm/orderConfirm",
+    "pages/orderSuccess/orderSuccess",
+    "pages/voiceResult/voiceResult",
+    "pages/chat/chat",
+    "pages/wschat/wschat",
+    "pages/sugarAnalyse/sugarAnalyse",
+    "pages/quanziDetail/quanziDetail",
+    "pages/publishTiezi/publishTiezi"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -51,7 +66,7 @@
         "text": "数据记录"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/quanzi/quanzi",
         "iconPath": "images/icon/quanzis.png",
         "selectedIconPath": "images/icon/quanzi.png",
         "text": "圈子"
