@@ -1,0 +1,15 @@
+<!--pages/quanziDetail/quanziDetail.wxml-->
+<view class="container">
+  <view class="header">
+      <view class="up">{{info.name}}</view>
+      <view class="middle">{{info.introduction}}</view>
+      <view class="down">{{info.tieziNum}}帖子</view>
+  </view>
+  <view class="fubu">
+  <navigator url="../publishTiezi/publishTiezi">
+     <button class="btn" type="primary"  >
+        + 发布帖子
+     </button>
+     </navigator>
+  </view>
+</view>
