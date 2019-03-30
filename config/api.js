@@ -2,7 +2,7 @@
  * @Description: 与后台连接的统一的API
  * @Author: pxf
  * @Date: 2018-12-01 16:28:17
- * @LastEditTime: 2019-03-28 21:48:13
+ * @LastEditTime: 2019-03-30 10:14:45
  * @LastEditors: Please set LastEditors
  */
 
@@ -28,4 +28,5 @@ module.exports = {
     sugar: ApiRootUrl + 'sugar/getsugar',  //血糖数据
     quanziData: ApiRootUrl + 'quanzi/quanzidata'  , //获取社群圈子列表
     quanziDetail: ApiRootUrl + 'quanzi/detail', //圈子级其下帖子。
+    publishTiezi: ApiRootUrl + 'quanzi/publishtiezi',  //发布帖子
 }

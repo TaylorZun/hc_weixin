@@ -37,7 +37,8 @@
     "pages/wschat/wschat",
     "pages/sugarAnalyse/sugarAnalyse",
     "pages/quanziDetail/quanziDetail",
-    "pages/publishTiezi/publishTiezi"
+    "pages/publishTiezi/publishTiezi",
+    "pages/publishSuccess/publishSuccess"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
