@@ -1,0 +1,9 @@
+<!--pages/publishSuccess/publishSuccess.wxml-->
+<view class="container">
+    <view class="tishi">帖子提交成功！</view>
+    <view class="tip">温馨提示：为了保证平台帖子质量，目前您的帖子正处于审核阶段。请耐心等待...</view>
+    <view class="button1">
+        <button class="publish" type="primary" plain="{{true}}" bindtap="publish">继续发帖</button>
+        <button class="back" type="warn" plain="{{true}}" bindtap="back">回到首页</button>
+    </view>
+</view>
